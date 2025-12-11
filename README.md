@@ -1,9 +1,12 @@
 # 越影（こゆかげ, metakage）
 
 ## 概要
-これは、[GlyphWiki](https://glyphwiki.org/)で用いられる漢字字形記述形式 KAGE に対するMETAFONTによる字形処理器です（[kamichikoichi/kage-engine](https://github.com/kamichikoichi/kage-engine) の再構築的な移植とも言えます）。ただし、部品の引用機能は未完成です。
+これは、[GlyphWiki](https://glyphwiki.org/)で用いられる漢字字形記述形式 KAGE に対するMETAFONTによる字形処理器です（[kamichikoichi/kage-engine](https://github.com/kamichikoichi/kage-engine) の再構築的かつ再解釈的な移植とも言えます）。ただし、部品の引用機能は未完成です。
 
 稀な漢字、（独自の）創作漢字、減字（琴の楽譜で使われる文字）、その他の文字など、符号化や字形化されていない文字を、TeX 文書で印字したり、[DavidFangWJ/open_metafog](https://github.com/DavidFangWJ/open_metafog) 経由で書体形式（ttf, otf等）化するのに役立ちます。
+
+方針としては、（現状では）見た目の細部にはこだわらず、多様な文字を METAFONT や TeX で楽に（簡単に）扱えることに重きを置いています。
+kage-engine の移植としては不完全ですが、METAFONT で多くの文字が扱いやすくなることに意義を置いています。
 
 ## 成果
 用例：左側のNotoは既存の書体（比較用）、右側の2字が越影による字形。
@@ -69,7 +72,7 @@ input metakage.mf;kage(41,"...");end
 更新するときは、pk, tfmを 削除します。
 
 ### 将来
-部品引用機能ができれば、外部の仕組み（編集器など）に頼らず、予め保存した基本部品を組み合わせて造字できるようになります。（より理想的）
+部品引用機能ができれば、外部の仕組み（字形編集器など）に頼らず、予め保存した基本部品を組み合わせて造字できるようになります。（より理想的）
 
 （でも、現状でも自由に造字できる環境は一応できました。GlyphWiki の投稿直前画面を使えばいいです。）
 
@@ -103,4 +106,10 @@ kage-engineはGPLですが、越影は、KAGE 形式を（再）解釈して始�
 - [KAGE/engineを勝手に改造した丸ゴシック試作エンジン](http://www.mars.dti.ne.jp/glyph/)
 - [kurgm/kage-editor: The graphical KAGE glyph editor](https://github.com/kurgm/kage-editor) 
 - [ge9/NazonoMincho: A customized version of Hanazono Mincho](https://github.com/ge9/NazonoMincho)
+
+## TeX & LaTeX アドベントカレンダー 2025
+これは [TeX & LaTeX アドベントカレンダー 2025](https://adventar.org/calendars/12019 "TeX ＆ LaTeX Advent Calendar 2025 - Adventar") 10日目の参加企画です。
+前の日は、[Yarakashi_Kikohshi さんの記事](https://qiita.com/Yarakashi_Kikohshi/items/67d3345be06d1e85b572) でした。
+
+
 
