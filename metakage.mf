@@ -1,0 +1,118 @@
+% metakage.mf - METAFONT版(修正版)
+mode_setup;
+u#:=0.05pt#;
+define_pixels(u);
+
+vardef bunkatu(suffix T)(expr s, a) =
+save c, tt, ss, j;
+string c, tt, ss;
+ss := s & a;
+tt := "";
+j := 0;
+for i = 0 upto length(ss)-1:
+    c := substring(i, i+1) of ss;
+    if c = a:
+    T[j] := tt;
+    j := j + 1;
+    tt := "";
+    else:
+    tt := tt & c;
+    fi
+endfor
+j
+enddef;
+
+def kage(expr charcode, t) =
+  string T[];
+  Tlen := bunkatu(T, t, "$");
+  
+  beginchar(charcode, 10pt#, 10pt#, 0pt#);
+    pickup pencircle xscaled 14u yscaled 6u rotated -10;
+    for i = 0 upto Tlen-1:
+      sen(T[i]);
+    endfor;
+  endchar;
+enddef;
+
+def sen(expr t) =
+  string TT[];
+  TTlen := bunkatu(TT, t, ":");
+  
+  numeric NN[];
+  NN[0] := scantokens TT[0];
+  for i = 3 upto TTlen-1:
+    NN[i] := scantokens TT[i];
+  endfor;
+  
+  pair a, b, c, dd;  % d を dd に変更
+  a := (NN[3]*u, (200-NN[4])*u);
+  b := (NN[5]*u, (200-NN[6])*u);
+  c := (0, 0);
+  dd := (0, 0);
+  
+  if NN[0]=1: 
+    tyokusen(a, b);
+  else:
+    c := (NN[7]*u, (200-NN[8])*u);
+    if NN[0]=2: 
+      kyokusen(a, b, c);
+    elseif NN[0]=22: 
+      kyokusenNobasi(a, b, c);
+    elseif NN[0]=3: 
+      oresen(a, b, c);
+    elseif NN[0]=4: 
+      otusen(a, b, c);
+    else:
+      dd := (NN[9]*u, (200-NN[10])*u);  % d を dd に変更
+      if NN[0]=6: 
+        hukukyokusen(a, b, c, dd);
+      elseif NN[0]=66: 
+        hukukyokusenNobasi(a, b, c, dd);
+      elseif NN[0]=7: 
+        tateharai(a, b, c, dd);
+      fi
+    fi
+  fi
+enddef;
+
+def tyokusen(expr a, b) =
+  draw a--b;
+enddef;
+
+def kyokusen(expr a, b, c) =
+  pair newb;
+  newb = 0.3[b, 0.3[a,c]];
+  draw a..controls newb..c;
+enddef;
+
+def kyokusenNobasi(expr a, b, c) =
+  draw a{a-b}..{b-c}c;
+enddef;
+
+def oresen(expr a, b, c) =
+  pair ab, cb;
+  ab := a + 0.92*(b - a);
+  cb := c + 0.92*(b - c);
+  draw a--ab{b-a}..{c-b}cb--c;
+enddef;
+
+def otusen(expr a, b, c) =
+  pair ab, cb;
+  ab := a + 0.8*(b - a);
+  cb := c + 0.8*(b - c);
+  draw a--ab{b-a}..{c-b}cb--c;
+enddef;
+
+def hukukyokusen(expr a, b, c, dd) =  % d を dd に変更
+  draw a..controls b and c..dd;
+enddef;
+
+def hukukyokusenNobasi(expr a, b, c, dd) =  % d を dd に変更
+  draw a{b-a}..{dd-c}dd;
+enddef;
+
+def tateharai(expr a, b, c, dd) =  % d を dd に変更
+  pair newc;
+  newc = 0.5[c, 0.5[b,dd]];
+  draw a--b{b-a}..newc..dd;
+enddef;
