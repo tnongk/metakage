@@ -13,7 +13,7 @@ kage-engine の移植としては不完全ですが、METAFONT で多くの文�
 ## 成果
 用例：左側のNotoは既存の書体（比較用）、右側の2字が越影による字形。
 
-爨は、画数の多い例として常用漢字から。「TeXの花」は創作漢字。
+爨は、画数の多い漢字の例として。「TeXの花」は創作漢字。
 ![](https://github.com/user-attachments/assets/607d8e8a-2737-4252-a312-815c3d8ce9fc)
 
 原文
