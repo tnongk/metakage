@@ -1,7 +1,7 @@
 # 越影（こゆかげ, metakage）
 
 ## 概要
-これは、[GlyphWiki](https://glyphwiki.org/)で用いられる漢字字形記述形式 KAGE に対するMETAFONTによる字形処理器です（[kamichikoichi/kage-engine](https://github.com/kamichikoichi/kage-engine) の再構築的かつ再解釈的な移植とも言えます）。ただし、部品の引用機能は未完成です。
+これは、[GlyphWiki](https://glyphwiki.org/)で用いられる漢字字形記述形式 KAGE に対するMETAFONTによる字形処理器です（[kamichikoichi/kage-engine](https://github.com/kamichikoichi/kage-engine) の再構築的かつ再解釈的な移植とも言えます）。ただし、部品の引用機能は未完成で、また、各種の線を引くのみであり、止め、はね、払いなども（現状では）ありません。
 
 稀な漢字、（独自の）創作漢字、減字（琴の楽譜で使われる文字）、その他の文字など、符号化や字形化されていない文字を、TeX 文書で印字したり、[DavidFangWJ/open_metafog](https://github.com/DavidFangWJ/open_metafog) 経由で書体形式（ttf, otf等）化するのに役立ちます。
 
