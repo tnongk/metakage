@@ -108,6 +108,7 @@ kage-engineはGPLですが、越影は、KAGE 形式を（再）解釈して始�
 - [KAGE/engineを勝手に改造した丸ゴシック試作エンジン](http://www.mars.dti.ne.jp/glyph/)
 - [kurgm/kage-editor: The graphical KAGE glyph editor](https://github.com/kurgm/kage-editor) 
 - [ge9/NazonoMincho: A customized version of Hanazono Mincho](https://github.com/ge9/NazonoMincho)
+- [作りましょうプロジェクト](https://tsukurimashou.org/index.php.ja)
 
 ## TeX & LaTeX アドベントカレンダー 2025
 これは [TeX & LaTeX アドベントカレンダー 2025](https://adventar.org/calendars/12019 "TeX ＆ LaTeX Advent Calendar 2025 - Adventar") 10日目の参加企画です。
