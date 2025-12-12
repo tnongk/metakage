@@ -111,7 +111,8 @@ kage-engineはGPLですが、越影は、KAGE 形式を（再）解釈して始�
 
 ## TeX & LaTeX アドベントカレンダー 2025
 これは [TeX & LaTeX アドベントカレンダー 2025](https://adventar.org/calendars/12019 "TeX ＆ LaTeX Advent Calendar 2025 - Adventar") 10日目の参加企画です。
-前の日は、[Yarakashi_Kikohshi さんの記事](https://qiita.com/Yarakashi_Kikohshi/items/67d3345be06d1e85b572) でした。
+前の日は、Yarakashi_Kikohshi さんの[“Two \documentclass or \documentstyle commands.” となってしまうファイル名を知りたい](https://qiita.com/Yarakashi_Kikohshi/items/67d3345be06d1e85b572) でした。
+次の日は、Kiri Nakuniさんの[(La)TeXで日本語をしよう！ ](https://note.com/light_masuisi/n/n8b41288c558a)です。
 
 
 
